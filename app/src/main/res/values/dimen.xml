@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hint_text_size">15sp</dimen>
+    <dimen name="navbar_title_text_size">20sp</dimen>
+    <dimen name="navbar_height">62dp</dimen>
+    <dimen name="list_profile_image_size">55dp</dimen>
+    <dimen name="addphoto_btn_size">80dp</dimen>
+    <dimen name="list_fullname_text_size">16sp</dimen>
+    <dimen name="feed_videothumb_size">98dp</dimen>
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/navbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navbar_height"
+            >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_bg3" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="119dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/wave" />
+            
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/lft_arrow" />
+
+            <ImageButton
+                android:id="@+id/doneButton"
+                android:layout_width="35dp"
+                android:layout_height="9dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:padding="10dp"
+                android:background="@drawable/done" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navbarLayout"
+            android:background="#ffffff"
+            >
+
+            <com.example.waive.ui.view.CircularImageView
+                android:id="@+id/addPhotoButton"
+                android:layout_width="@dimen/addphoto_btn_size"
+                android:layout_height="@dimen/addphoto_btn_size"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="31dp"
+                android:clickable="true"
+                android:background="@drawable/add_photo_btn"/>
+            
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="289dp"
+                android:layout_height="27dp"
+                android:layout_below="@+id/addPhotoButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/fullnameText"
+                android:layout_width="289dp"
+                android:layout_height="27dp"
+                android:layout_below="@+id/emailText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/fullname_hint"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/usernameText"
+                android:layout_width="289dp"
+                android:layout_height="27dp"
+                android:layout_below="@+id/fullnameText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/username_hint"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/pwText"
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_below="@+id/usernameText"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_halfbdr"
+                android:ems="10"
+                android:hint="@string/pw_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/repwText"
+                android:layout_width="172dp"
+                android:layout_height="27dp"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_below="@+id/usernameText"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_halfbdr"
+                android:ems="10"
+                android:hint="@string/repw_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+            </EditText>
+            
+        </RelativeLayout>
+
+</RelativeLayout>

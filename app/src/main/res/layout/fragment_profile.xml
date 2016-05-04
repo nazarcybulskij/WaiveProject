@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newsfeed_row_bg_color" >
+
+        <RelativeLayout
+            android:id="@+id/profileView"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:background="@drawable/nav_bg3">
+            
+            <RelativeLayout
+                android:id="@+id/profileImageLayout"
+               	android:layout_width="wrap_content"
+               	android:layout_height="70dp"
+               	android:layout_centerVertical="true"
+               	android:layout_marginStart="10dp">
+	           	<com.example.waive.ui.view.CircularImageView
+	               android:id="@+id/profileImageView"
+	               android:layout_width="60dp"
+	               android:layout_height="60dp"/>
+	            <ImageButton
+	                android:id="@+id/followButton"
+	                android:layout_width="19dp"
+	                android:layout_height="19dp"
+	                android:layout_centerHorizontal="true"
+	                android:layout_alignParentBottom="true"
+	                android:background="@drawable/plus"/>
+			</RelativeLayout>	
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/profileImageLayout"
+                android:layout_toStartOf="@+id/followersLayout"
+                >
+	            <TextView
+	                android:id="@+id/usernameTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:lines="1"
+	                android:textColor="@color/username_text_color"
+	                android:textSize="13sp"
+	                android:textStyle="bold"
+	                android:text="alexandrov1987" />
+				
+	            <ImageButton
+	                android:id="@+id/blockButton"
+	                android:layout_width="19dp"
+	                android:layout_height="19dp"
+	                android:layout_alignParentEnd="true"
+	                android:background="@drawable/unblock60"/>
+	            
+	            <TextView
+	                android:id="@+id/fullnameTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/usernameTextView"
+	                android:layout_alignStart="@+id/usernameTextView"
+	                android:layout_marginTop="10dp"
+	                android:lines="1"
+	                android:textSize="13sp"
+	                android:textColor="@color/title_text_color"
+	                android:text="Nazar Alexandrov" />
+  	         </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/followingLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                >
+
+	            <TextView
+	                android:id="@+id/followingTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:clickable="true"
+	                android:lines="1"
+	                android:text="0"
+	                android:textColor="#6e8ffb"
+	                android:textSize="12sp"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/followingTextView"
+	                android:layout_centerHorizontal="true"
+	                android:lines="1"
+	                android:textColor="#73bea3"
+	                android:textSize="12sp"
+	                android:text="Following" />
+  	         </RelativeLayout>
+  	         <View 
+  	             android:id="@+id/dividerLayout"
+  	             android:layout_width="2dp"
+  	             android:layout_height="18dp"
+  	             android:layout_toStartOf="@+id/followingLayout"
+  	             android:layout_marginEnd="4dp"
+  	             android:layout_centerVertical="true"
+  	             android:background="#a0e4cd"
+  	             />
+            <RelativeLayout
+                android:id="@+id/followersLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/dividerLayout"
+                android:layout_marginEnd="4dp"
+                >
+
+	            <TextView
+	                android:id="@+id/followersTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:lines="1"
+	                android:clickable="true"
+	                android:text="0"
+	                android:textColor="#6e8ffb"
+	                android:textSize="12sp"
+	                android:textStyle="bold" />
+
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/followersTextView"
+	                android:layout_centerHorizontal="true"
+	                android:lines="1"
+	                android:textColor="#73bea3"
+	                android:textSize="12sp"
+	                android:text="Followers" />
+  	         </RelativeLayout>
+            	         
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/zoomView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@+id/profileView"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:lines="1"
+                android:text="Feed" />
+
+            <ImageButton
+                android:id="@+id/zoominButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/mag_zoomin_btn" />
+
+            <ImageButton
+                android:id="@+id/zoomoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/zoominButton"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/mag_zoomout_btn" />
+            
+        </RelativeLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+    			android:id="@+id/swipe_refresh_layout"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_below="@+id/zoomView">
+		        <ListView
+			        android:id="@+id/lv_post"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:background="#f8f8f8"
+			        android:listSelector="@android:color/transparent"               
+					android:cacheColorHint="@android:color/transparent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

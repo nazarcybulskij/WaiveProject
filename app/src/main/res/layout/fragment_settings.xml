@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+        <RelativeLayout
+            android:id="@+id/navbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navbar_height">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_bg3" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/settings_title"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/navbar_title_text_size"
+                />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navbarLayout"
+            android:background="#ffffff">
+
+            <ImageButton
+                android:id="@+id/userinfoButton"
+                android:layout_width="278dp"
+                android:layout_height="41dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/user_info_btn" />
+
+            <ImageButton
+                android:id="@+id/termsButton"
+                android:layout_width="278dp"
+                android:layout_height="41dp"
+                android:layout_below="@+id/userinfoButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/terms_use_btn" />
+            
+            <ImageButton
+                android:id="@+id/signoutButton"
+                android:layout_width="278dp"
+                android:layout_height="41dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="31dp"
+                android:background="@drawable/sign_out_btn" />
+
+            <RelativeLayout
+                android:id="@+id/twconnectButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="22dp"
+                android:layout_above="@+id/signoutButton">
+                
+                <ImageButton
+	                android:id="@+id/twconnectButton"
+	                android:layout_width="50dp"
+	                android:layout_height="30dp"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/tw_checked"
+                    />
+                <TextView
+                    android:layout_width="80dp"
+	                android:layout_height="30dp"
+	                android:layout_below="@+id/twconnectButton"
+	                android:gravity="center"
+	                android:textColor="#000000"
+	                android:text="@string/connect_tw_btn_title"
+	                android:textSize="12sp"
+                    />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/fbconnectButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/twconnectButtonLayout"
+                android:layout_alignTop="@+id/twconnectButtonLayout"
+                >
+                
+                <ImageButton
+	                android:id="@+id/fbconnectButton"
+	                android:layout_width="50dp"
+	                android:layout_height="30dp"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/fb_checked"
+                    />
+                <TextView
+                    android:layout_width="80dp"
+	                android:layout_height="30dp"
+	                android:layout_below="@+id/fbconnectButton"
+	                android:gravity="center"
+	                android:textColor="#000000"
+	                android:text="@string/connect_fb_btn_title"
+	                android:textSize="12sp"
+                    />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/instaconnectButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/twconnectButtonLayout"
+                android:layout_marginStart="20dp"
+                android:layout_alignTop="@+id/twconnectButtonLayout"
+                >
+                
+                <ImageButton
+	                android:id="@+id/instaconnectButton"
+	                android:layout_width="50dp"
+	                android:layout_height="30dp"
+	                android:layout_centerHorizontal="true"
+	                android:background="@drawable/insta_checked"
+                    />
+                <TextView
+                    android:layout_width="80dp"
+	                android:layout_height="30dp"
+	                android:layout_below="@+id/instaconnectButton"
+	                android:gravity="center"
+	                android:textColor="#000000"
+	                android:text="@string/connect_insta_btn_title"
+	                android:textSize="12sp"
+                    />
+            </RelativeLayout>
+            
+        </RelativeLayout>
+</RelativeLayout>

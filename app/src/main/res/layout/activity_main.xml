@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="219dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="94dp"
+        android:src="@drawable/welcome" />
+
+    <ImageButton
+        android:id="@+id/signupButton"
+        android:layout_width="278dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/signinButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/signup_btn" />
+
+    <ImageButton
+        android:id="@+id/signinButton"
+        android:layout_width="278dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/fbButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/signin_btn" />
+    
+    <ImageButton
+        android:id="@+id/fbButton"
+        android:layout_width="278dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/termsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/sign_in_fb_btn" />
+    
+    <ImageButton
+        android:id="@+id/termsButton"
+        android:layout_width="82dp"
+        android:layout_height="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/terms" />
+    
+</RelativeLayout>

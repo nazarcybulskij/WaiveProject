@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Waivelength</string>
+    <string name="email_hint">Email Address</string>
+    <string name="fullname_hint">Type Full Name</string>
+    <string name="username_hint">Type Username Here</string>
+    <string name="pw_hint">Password</string>
+    <string name="repw_hint">Re-Type Password</string>
+    <string name="notification_title">Notifications</string>
+    <string name="settings_title">Settings</string>
+    <string name="newsfeed_tab_title">Newsfeed</string>
+    <string name="notification_tab_title">Notification</string>
+    <string name="profile_tab_title">Profile</string>
+    <string name="settings_tab_title">Settings</string>
+    <string name="userinfo_title">User Information</string>
+    <string name="fullname_hint1">Name</string>
+    <string name="username_hint1">Username</string>
+    <string name="curpw_hint">Current Password</string>
+    <string name="newpw_hint">New Password</string>
+    <string name="confirmpw_hint">Confirm New Password</string>
+    <string name="likes_title">Likes</string>
+    <string name="followers_title">Followers</string>
+    <string name="findpeople_title">Find People To Follow</string>
+	<string name="comments_title">Comments</string>
+	<string name="connect_fb_btn_title">Connect Facebook</string>
+	<string name="connect_tw_btn_title">Connect Twitter</string>
+	<string name="connect_insta_btn_title">Connect Instagram</string>
+	<!--<string name="facebook_app_id">1585892508388285</string>-->
+  <string name="facebook_app_id">1075523269161299</string>
+	<string name="comment_hint">Leave a Comment</string>
+	<string name="search_hint">Search for people</string>	
+	<string name="camera_error">This device doesn\'t support Camera2 API.</string>		
+	<string name="filter_none">None</string>
+	<string name="filter_sepia">Sepia</string>
+	<string name="filter_mono">Mono</string>
+	<string name="filter_saturation">Saturation</string>
+	<string name="filter_gamma">Gamma</string>
+	<string name="filter_dim">Dim</string>
+	<string name="filter_amatroka">Amatroka</string>
+	<string name="filter_soft">Soft</string>
+	<string name="filter_hue">Hue</string>
+	<string name="post_fb_btn">Post to Facebook</string>
+	<string name="post_tw_btn">Post to Twitter</string>
+	<string name="post_insta_btn">Post to Instagram</string>
+	<string name="post_caption_hint">Tap here to write a caption</string>
+	<string name="device_not_supported_message">FFmpeg is not supported on your device</string>
+    <string name="error">Error</string>
+    <string name="load_failed">FFMpeg failed to load</string>
+    <string name="cant_process_video">Can\'t process video</string>
+    <string name="another_command_is_running">Another command is already running</string>
+	<string name="select_video">Select video to trim</string>
+</resources>

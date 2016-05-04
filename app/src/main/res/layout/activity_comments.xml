@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newsfeed_row_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/navbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_bg3" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/comments_title"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/navbar_title_text_size"/>
+        
+     <ImageButton
+         android:id="@+id/backButton"
+         android:layout_width="23dp"
+         android:layout_height="17dp"
+         android:layout_centerVertical="true"
+         android:layout_marginStart="12dp"
+         android:layout_alignParentStart="true"
+         android:background="@drawable/lft_arrow" />
+        
+    </RelativeLayout>
+
+	<android.support.v4.widget.SwipeRefreshLayout
+   			android:id="@+id/swipe_refresh_layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_below="@+id/navbarLayout"
+       		android:layout_above="@+id/bottombarLayout"
+       		android:background="#f8f8f8">
+	        <ListView
+	            android:id="@+id/listView1"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"/>
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottombarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/commentButton"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp"
+            android:background="@drawable/comment_btn" />
+        
+        <EditText
+            android:id="@+id/commentText"
+            android:layout_width="310dp"
+            android:layout_height="35dp"
+            android:layout_toStartOf="@+id/commentButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/comment_input"
+            android:ems="10"
+            android:hint="@string/comment_hint"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="@dimen/hint_text_size"
+            android:textStyle="italic" />
+                        
+
+    </RelativeLayout>
+    
+</RelativeLayout>

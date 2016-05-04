@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/newsfeed_row_bg_color" >
+    
+	<com.example.waive.ui.view.CircularImageView
+         android:id="@+id/profileImageView"
+      	 android:layout_width="@dimen/list_profile_image_size"
+	     android:layout_height="@dimen/list_profile_image_size"
+         android:layout_centerVertical="true"
+         android:layout_marginStart="14dp"
+     />
+
+	<RelativeLayout
+	    android:id="@+id/layoutRight"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginStart="14dp"
+	    android:layout_toEndOf="@+id/profileImageView"
+	    android:layout_centerVertical="true">
+	    
+       <TextView
+           android:id="@+id/notificationTextview"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:lines="1"
+           android:text="Stephen Holdsworth"
+           android:textColor="@color/newsfeed_row_fullname_text_color"
+           android:textSize="@dimen/list_fullname_text_size" />
+       
+		<ImageView
+		    android:id="@+id/imageView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/notificationTextview"
+		    android:background="@drawable/clock" />
+
+		<TextView
+		    android:id="@+id/timeTextView"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_alignTop="@+id/imageView1"
+		    android:layout_toEndOf="@+id/imageView1"
+		    android:gravity="start"
+		    android:textSize="12sp"   
+		    android:text="1h" />
+	</RelativeLayout>
+	<RelativeLayout
+	    android:id="@+id/videoThumbnailLayout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentEnd="true"
+	    android:layout_centerVertical="true"
+        android:layout_marginStart="14dp">
+		
+		<com.example.waive.ui.view.CircularImageView
+	         android:id="@+id/videoImageView"
+	      	 android:layout_width="@dimen/list_profile_image_size"
+		     android:layout_height="@dimen/list_profile_image_size"/>
+
+		<ImageView
+		    android:id="@+id/imageView2"
+		    android:layout_width="15dp"
+		    android:layout_height="19dp"
+		    android:layout_centerInParent="true"
+		    android:src="@drawable/play_icon" />
+	    		
+	</RelativeLayout>		
+</RelativeLayout>

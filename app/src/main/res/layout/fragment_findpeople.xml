@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newsfeed_row_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/navbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_bg3" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/findpeople_title"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/navbar_title_text_size" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="23dp"
+            android:layout_height="17dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/lft_arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchSelectorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/navbarLayout"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RelativeLayout
+            android:id="@+id/normsearchSelectorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/search_btn" />
+
+            <ImageView
+                android:id="@+id/normsearchSelector"
+                android:layout_width="73dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fbsearchSelectorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/fb_btn" />
+
+            <ImageView
+                android:id="@+id/fbsearchSelector"
+                android:layout_width="73dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/twsearchSelectorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tw_btn" />
+
+            <ImageView
+                android:id="@+id/twsearchSelector"
+                android:layout_width="73dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/searchSelectorLayout" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="344dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/serch_bg"
+            android:drawableLeft="@drawable/search_icon"
+            android:ems="10"
+            android:hint="@string/search_hint"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="@dimen/hint_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1"/>
+
+</RelativeLayout>

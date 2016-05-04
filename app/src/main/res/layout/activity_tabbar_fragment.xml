@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_bar"
+        />
+
+    <LinearLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" >
+
+        <RelativeLayout
+	        android:id="@+id/tab_newsfeed_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_gravity="bottom"
+	        android:layout_weight="1">
+	        <RelativeLayout
+		        android:id="@+id/tab_newsfeed_content1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true">
+            	        
+		        <ImageView
+		            android:id="@+id/tab_newsfeed"
+		            android:layout_width="24dp"
+		            android:layout_height="17dp"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/newsfeed" />
+	
+		        <TextView
+		            android:id="@+id/tab_newsfeed_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/tab_newsfeed"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/newsfeed_tab_title"
+		            android:textColor="@color/tab_button_pressed_text_color"
+		            android:textSize="10sp" />
+            </RelativeLayout>
+    	</RelativeLayout>
+        
+        <RelativeLayout
+	        android:id="@+id/tab_notification_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_gravity="bottom"
+	        android:layout_weight="1">
+	        <RelativeLayout
+		        android:id="@+id/tab_notification_content1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true">
+	            <ImageView
+		            android:id="@+id/tab_notification"
+		            android:layout_width="18dp"
+		            android:layout_height="19dp"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/notification" />
+	
+	            <TextView
+		            android:id="@+id/tab_notification_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/tab_notification"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/notification_tab_title"
+		            android:textColor="@color/tab_button_disable_text_color"
+		            android:textSize="10sp" />
+            </RelativeLayout>
+    	</RelativeLayout>
+            
+
+        <ImageView
+            android:id="@+id/tab_addvideo"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/add_video" />
+
+        <RelativeLayout
+	        android:id="@+id/tab_profile_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_gravity="bottom"
+	        android:layout_weight="1">
+            <RelativeLayout
+		        android:id="@+id/tab_profile_content1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true">
+			    <ImageView
+		            android:id="@+id/tab_profile"
+		            android:layout_width="20dp"
+		            android:layout_height="20dp"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/profile" />
+	
+	            <TextView
+		            android:id="@+id/tab_profile_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@+id/tab_profile"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/profile_tab_title"
+		            android:textColor="@color/tab_button_disable_text_color"
+		            android:textSize="10sp" />
+                
+            </RelativeLayout>
+            
+        </RelativeLayout>
+        <RelativeLayout
+	        android:id="@+id/tab_settings_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="46dp"
+	        android:layout_gravity="bottom"
+	        android:layout_weight="1"
+	    	>
+	        
+            <RelativeLayout
+		        android:id="@+id/tab_settings_content1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true">
+	    	
+	        <ImageView
+	            android:id="@+id/tab_settings"
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+    	        android:layout_centerHorizontal="true"
+	            android:background="@drawable/settings_disable" />
+
+	        <TextView
+	            android:id="@+id/tab_settings_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/tab_settings"
+	            android:layout_centerHorizontal="true"
+	            
+	            android:text="@string/settings_tab_title"
+	            android:textColor="@color/tab_button_disable_text_color"
+	            android:textSize="10sp" />
+	        </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

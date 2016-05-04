@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    <RelativeLayout
+        android:id="@+id/navbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nav_bg3" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="201dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/record" />
+                    
+	      <ImageButton
+	          android:id="@+id/closeButton"
+	          android:layout_width="17dp"
+	          android:layout_height="17dp"
+	          android:layout_centerVertical="true"
+	          android:layout_marginStart="12dp"
+	          android:layout_alignParentStart="true"
+	          android:background="@drawable/close" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="23dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rgt_arrow" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/topbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/navbarLayout"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+	            android:id="@+id/textView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Choose a Cover Photo"
+	            android:layout_centerHorizontal="true"
+	            android:textStyle="italic"/>
+            
+            <com.example.waive.ui.view.VideoThumbnailsView
+	            android:id="@+id/videoThumbnails"
+	            android:layout_width="336dp"
+	            android:layout_height="45dp"
+	           	android:layout_centerHorizontal="true"
+	           	android:layout_below="@+id/textView1"
+	           	android:layout_marginTop="5dp"
+	            android:background="#000000"/>
+            
+        </RelativeLayout>
+        		        
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarLayout"
+        android:layout_above="@+id/bottombarLayout">
+       <ImageView
+           android:id="@+id/thumbnailImageView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scaleType="fitXY" />
+        
+       <VideoView
+           android:id="@+id/videoView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_alignParentBottom="true"
+   			android:layout_alignParentStart="true"
+   			android:layout_alignParentEnd="true"
+   			android:layout_alignParentTop="true"/>
+           
+       <ImageButton
+           android:id="@+id/playButton"
+           android:layout_width="59dp"
+           android:layout_height="76dp"
+           android:layout_centerInParent="true"
+           android:background="@drawable/play_icon_big" />
+       
+	</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottombarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:layout_alignParentBottom="true">
+        
+        <ImageView
+            android:id="@+id/leftCropBtm"
+            android:layout_width="14dp"
+            android:layout_height="22dp"
+            android:layout_above="@+id/videoTrimView"
+            android:background="@drawable/crop_btm"/>
+
+        <ImageView
+            android:id="@+id/rightCropBtm"
+            android:layout_width="14dp"
+            android:layout_height="22dp"
+            android:layout_above="@+id/videoTrimView"
+            android:background="@drawable/crop_btm"/>
+        
+        <com.example.waive.ui.view.VideoTrimView
+            android:id="@+id/videoTrimView"
+            android:layout_width="342dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+        	
+    </RelativeLayout>
+</RelativeLayout>

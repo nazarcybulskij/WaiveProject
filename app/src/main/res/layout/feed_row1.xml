@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numberBody"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="#f8f8f8" >
+
+    <ImageView
+        android:id="@+id/feedBgImageView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/waive_left" />
+
+
+    <RelativeLayout
+        android:id="@+id/rightlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp">
+        
+       <RelativeLayout
+            android:id="@+id/video_thumbnail_layout"
+         	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_centerInParent="true">
+
+           <com.example.waive.ui.view.CircularImageView
+	          android:id="@+id/video_thumbnail"
+	          android:layout_width="@dimen/feed_videothumb_size"
+	          android:layout_height="@dimen/feed_videothumb_size"
+	          />
+	
+	         <ImageView
+	             android:id="@+id/imageView1"
+	             android:layout_width="26dp"
+	             android:layout_height="33dp"
+	             android:layout_centerInParent="true"
+	             android:src="@drawable/play_icon" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/video_thumbnail_layout"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@drawable/clock"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imageView5"
+                android:layout_marginStart="2dp"
+                android:text="4 sec"
+                android:textSize="12sp"
+                android:layout_centerVertical="true" />
+            
+        </RelativeLayout>
+                
+    </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_toStartOf="@+id/rightlayout"
+         android:layout_marginStart="43dp"
+         >
+
+         <TextView
+             android:id="@+id/fullnameTextView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Stepen Holdsworth"
+             android:textColor="@color/newsfeed_row_fullname_text_color"
+             android:textSize="16sp" />
+
+         <TextView
+             android:id="@+id/captionsTextView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/fullnameTextView"
+             android:gravity="center_vertical"
+             android:lines="2"
+             android:text="Stepen Holdsworth"
+             android:textColor="@color/newsfeed_row_caption_text_color"
+             android:textSize="16sp" />
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/captionsTextView"
+             android:layout_alignParentEnd="true"
+             android:orientation="horizontal" >
+
+             <ImageView
+                 android:id="@+id/imageView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/comments"
+                 android:layout_gravity="center_vertical" />
+
+             <TextView
+                 android:id="@+id/commentCntTextView"
+                 android:layout_width="40dp"
+                 android:layout_height="wrap_content"
+                 android:text="2"
+                 android:gravity="center"
+                 android:layout_gravity="center_vertical" />
+
+             <ImageView
+                 android:id="@+id/imageView3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/sep"
+                 android:layout_marginStart="5dp"
+                 android:layout_marginEnd="5dp"
+                 android:layout_gravity="center_vertical"/>
+
+             <ImageView
+                 android:id="@+id/imageView4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/heart" 
+                 android:layout_gravity="center_vertical"/>
+
+             <TextView
+                 android:id="@+id/likeCntTextView"
+                 android:layout_width="40dp"
+                 android:layout_height="wrap_content"
+                 android:text="3" 
+                 android:gravity="center"
+                 android:layout_gravity="center_vertical"/>
+             
+         </LinearLayout>
+         <TextView
+            android:id="@+id/likeThisLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

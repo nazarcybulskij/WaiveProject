@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true" >
+    
+    <RelativeLayout
+        android:id="@+id/thumbnailLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+		<com.example.waive.ui.view.CircularImageView 
+		    android:id="@+id/thumbnailImageView"
+		    android:layout_width="57dp"
+		    android:layout_height="57dp"/>
+		<ImageView 
+		    android:layout_width="20dp"
+		    android:layout_height="25dp"
+		    android:layout_centerInParent="true"
+		    android:background="@drawable/play_icon"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/viewsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnailLayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="4dp"/>
+</RelativeLayout>

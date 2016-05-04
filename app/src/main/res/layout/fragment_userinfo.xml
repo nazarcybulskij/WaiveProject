@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+        <RelativeLayout
+            android:id="@+id/navbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navbar_height"
+			>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nav_bg3" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/userinfo_title"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/navbar_title_text_size" />
+            
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/close" />
+
+            <ImageButton
+                android:id="@+id/saveButton"
+                android:layout_width="35dp"
+                android:layout_height="9dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/done" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navbarLayout"
+            android:background="#ffffff"
+            
+             >
+<!-- 
+            <ImageButton
+                android:id="@+id/addPhotoButton"
+                android:layout_width="@dimen/addphoto_btn_size"
+                android:layout_height="@dimen/addphoto_btn_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/add_photo" />
+ -->
+            <com.example.waive.ui.view.CircularImageView
+	    	    android:id="@+id/addPhotoButton"
+                android:layout_width="@dimen/addphoto_btn_size"
+                android:layout_height="@dimen/addphoto_btn_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/add_photo"
+                android:clickable="true"
+		     />
+            
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/addPhotoButton"
+                android:layout_toEndOf="@+id/addPhotoButton"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/fullnameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailText"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/fullname_hint1"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullnameText"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/username_hint1"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:singleLine="true"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/pwText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_below="@+id/usernameText"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bdr"
+                android:ems="10"
+                android:hint="@string/curpw_hint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:singleLine="true"
+                android:textStyle="italic" >
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/repwText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_below="@+id/pwText"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_halfbdr"
+                android:ems="10"
+                android:hint="@string/newpw_hint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:singleLine="true"
+                android:textStyle="italic" >
+
+            </EditText>            
+            <EditText
+                android:id="@+id/confirmpwText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/emailText"
+                android:layout_alignEnd="@+id/emailText"
+                android:layout_below="@+id/repwText"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_halfbdr"
+                android:ems="10"
+                android:hint="@string/confirmpw_hint"
+                android:inputType="textPassword"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/hint_text_size"
+                android:singleLine="true"
+                android:textStyle="italic" >
+
+            </EditText>
+
+        </RelativeLayout>
+</RelativeLayout>

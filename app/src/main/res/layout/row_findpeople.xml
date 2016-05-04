@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/newsfeed_row_bg_color" >
+    
+	<com.example.waive.ui.view.CircularImageView
+         android:id="@+id/profileImageView"
+         android:layout_width="@dimen/list_profile_image_size"
+         android:layout_height="@dimen/list_profile_image_size"
+         android:layout_centerVertical="true"
+         android:layout_marginStart="14dp"
+     />
+
+	<TextView
+         android:id="@+id/like_fullnameTextview"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_toEndOf="@+id/profileImageView"
+         android:layout_marginStart="14dp"
+         android:textSize="@dimen/list_fullname_text_size"
+         android:textColor="@color/newsfeed_row_fullname_text_color"
+         android:text="Stephen Holdsworth" />
+	
+	<ImageButton
+	    android:id="@+id/followButton"
+	    android:layout_width="54dp"
+	    android:layout_height="22dp"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginEnd="20dp"
+	    android:background="@drawable/follow_nml"/>
+		
+</RelativeLayout>

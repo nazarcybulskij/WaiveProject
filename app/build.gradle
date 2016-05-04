@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.waive"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets.main {
+        assets.srcDirs = ['assets']
+        jniLibs.srcDirs = ['libs']
+        jni.srcDirs = [] //disable automatic ndk-build
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':FFmpegAndroid')
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
+    compile 'com.parse:parsefacebookutils-v4-android:1.10.4@aar'
+}
+
+
+
+
+
